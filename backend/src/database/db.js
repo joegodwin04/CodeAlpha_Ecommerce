@@ -83,6 +83,8 @@ db.exec(`
 const count = db.prepare('SELECT COUNT(*) as count FROM products').get();
 if (count.count === 0) {
   console.log('🌱 Seeding database with sample products...');
+  // Reset the AUTOINCREMENT counter so IDs always start from 1
+  db.prepare("DELETE FROM sqlite_sequence WHERE name = 'products'").run();
   seed(db);
   console.log('✅ Database seeded successfully.');
 }

@@ -72,11 +72,21 @@ const updateCartItem = (req, res) => {
     const productId = parseInt(req.params.productId);
     const qty       = parseInt(req.body.quantity);
 
-    if (isNaN(productId) || productId <= 0) {
+    if (Number.isNaN(productId) || productId <= 0) {
       return res.status(400).json({ success: false, message: 'Invalid product ID.' });
     }
-    if (isNaN(qty) || qty <= 0) {
-      return res.status(400).json({ success: false, message: 'Quantity must be a positive number.' });
+    if (Number.isNaN(qty) || qty < 0) {
+      return res.status(400).json({ success: false, message: 'Quantity must be a non-negative number.' });
+    }
+
+    // Treat qty === 0 as a remove request (common cart convention)
+    if (qty === 0) {
+      Cart.removeItem(req.user.id, productId);
+      return res.status(200).json({
+        success: true,
+        message: 'Item removed from cart.',
+        data:    buildCartResponse(req.user.id),
+      });
     }
 
     const product = Product.findById(productId);

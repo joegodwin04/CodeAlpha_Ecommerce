@@ -233,3 +233,5 @@ The project uses an embedded **SQLite** database via `better-sqlite3`.
 ## 📜 License & Acknowledgments
 
 Developed as part of the **CodeAlpha Internship Program** — Task 1 (Full Stack E-Commerce Development).
+
+<!-- Deployment pipeline verified -->

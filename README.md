@@ -1,48 +1,101 @@
-# CodeAlpha E-Commerce Store (TechStore)
+# 🛒 CodeAlpha E-Commerce Store — TechStore
 
-> **CodeAlpha Internship — Full Stack Web Development Task 1**  
-> A modern, full-stack electronics e-commerce web application featuring a curated product catalog, JWT authentication with security question recovery, persistent shopping cart, and complete order processing.
+> **CodeAlpha Internship — Full Stack Web Development | Task 1**  
+> A modern, full-stack electronics e-commerce web application featuring a curated product catalog, JWT authentication with security-question recovery, persistent shopping cart, and complete order-processing workflows.
+
+[![Frontend](https://img.shields.io/badge/Frontend-React%2019-61DAFB?logo=react&logoColor=white)](https://react.dev/)
+[![Build Tool](https://img.shields.io/badge/Build-Vite-646CFF?logo=vite&logoColor=white)](https://vite.dev/)
+[![Backend](https://img.shields.io/badge/Backend-Node.js-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![API](https://img.shields.io/badge/API-Express.js-000000?logo=express&logoColor=white)](https://expressjs.com/)
+[![Database](https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![Authentication](https://img.shields.io/badge/Auth-JWT-000000?logo=jsonwebtokens&logoColor=white)](https://jwt.io/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+🌐 **Live Demo:** [Open TechStore](YOUR_VERCEL_URL)
+
+📦 **Repository:** [GitHub Repository](YOUR_GITHUB_REPOSITORY_URL)
 
 ---
 
 ## 📸 Overview
 
-**TechStore** is an e-commerce platform built with **React + Vite** on the frontend and **Node.js + Express + SQLite** on the backend. It offers a shopping experience with dark/light theme switching, responsive design, and end-to-end purchasing workflows.
+**TechStore** is a full-stack electronics e-commerce platform built with **React + Vite** on the frontend and **Node.js + Express + SQLite** on the backend.
+
+The application provides a complete shopping experience with product browsing, authentication, persistent shopping carts, secure checkout, order history, responsive design, and light/dark theme support.
+
+The project was developed as **Task 1 of the CodeAlpha Full Stack Web Development Internship**, with an emphasis on building, testing, and deploying a complete full-stack web application.
 
 ---
 
 ## ✨ Features
 
-- **Product Catalog:**
-  - 25+ realistic consumer technology products across multiple categories (*Audio, Computer Accessories, Workspace, Mobile Accessories, Wearables, Gaming, Networking*).
-  - Category filtering chips with keyboard accessibility and horizontal scroll snapping.
-  - Interactive product cards supporting whole-card navigation as well as dedicated CTA buttons.
+### 🛍️ Product Catalog
 
-- **Product Details:**
-  - High-resolution product images, real-time stock indicators, and quantity selectors.
-  - Value propositions (*Warranty, Free Shipping guarantees*).
-  - Feedback banners on adding items to cart with direct cart navigation.
+- 25+ realistic consumer technology products.
+- Multiple product categories including Audio, Computer Accessories, Workspace, Mobile Accessories, Wearables, Gaming, and Networking.
+- Category filtering chips.
+- Keyboard-accessible category navigation.
+- Horizontal scroll snapping for category navigation.
+- Interactive product cards.
+- Whole-card navigation with dedicated CTA buttons.
 
-- **Authentication & Security:**
-  - User registration and login using JSON Web Tokens (JWT) and `bcryptjs` password hashing.
-  - Security question setup during registration.
-  - 3-step Forgot Password recovery flow (*Email verification → Security question challenge → Password reset*).
+### 📦 Product Details
 
-- **Shopping Cart:**
-  - Real-time stock validation preventing users from exceeding available inventory.
-  - Quantity controls, line-item removal, and complete cart clearing.
-  - Empty-state illustrations and calls-to-action for both authenticated and guest users.
+- High-resolution product images.
+- Real-time stock indicators.
+- Quantity selectors.
+- Product information and pricing.
+- Warranty and free-shipping value propositions.
+- Add-to-cart feedback banners.
+- Direct navigation to the shopping cart.
 
-- **Checkout & Order Processing:**
-  - Shipping address form with validation.
-  - Atomic order creation backed by SQLite transactions, automatically capturing product prices at checkout.
-  - User-isolated order history and individual order receipt views.
+### 🔐 Authentication & Security
 
-- **Design System & UX:**
-  - Light & Dark mode support with persistent `localStorage` preference and zero flash-of-unformatted-content (FOUC) on load.
-  - Custom UI built with vanilla CSS Modules and strict design tokens (4/8px spacing rhythm, 3-level elevation).
-  - Iconography powered by `lucide-react`.
-  - Fully responsive across mobile, tablet, and desktop breakpoints.
+- User registration.
+- User login.
+- JSON Web Token (JWT) authentication.
+- Password hashing using `bcryptjs`.
+- Security-question setup during registration.
+- Three-step password recovery flow:
+  1. Email verification
+  2. Security-question verification
+  3. Password reset
+- Protected cart and order routes.
+
+### 🛒 Shopping Cart
+
+- Persistent shopping cart.
+- Real-time stock validation.
+- Prevention of quantities exceeding available inventory.
+- Quantity controls.
+- Individual line-item removal.
+- Complete cart clearing.
+- Cart total calculation.
+- Empty-cart state with clear calls-to-action.
+- Support for authenticated and guest shopping experiences.
+
+### 💳 Checkout & Order Processing
+
+- Shipping-address form.
+- Form validation.
+- Atomic order creation.
+- SQLite transactions for order processing.
+- Product prices captured at checkout.
+- Automatic cart clearing after successful order creation.
+- User-isolated order history.
+- Individual order receipt/details views.
+
+### 🎨 Design System & User Experience
+
+- Light and dark theme support.
+- Theme preference persisted using `localStorage`.
+- Zero flash-of-unformatted-content (FOUC) during theme loading.
+- Custom UI using CSS Modules.
+- Consistent design tokens.
+- 4px/8px spacing rhythm.
+- Three-level elevation system.
+- `lucide-react` iconography.
+- Responsive layouts for mobile, tablet, and desktop.
 
 ---
 
@@ -50,188 +103,547 @@
 
 | Layer | Technologies |
 |---|---|
-| **Frontend** | React 19, Vite 8, React Router 7, Lucide Icons, CSS Modules |
+| **Frontend** | React 19, Vite 8, React Router 7, Lucide React, CSS Modules |
 | **Backend** | Node.js, Express.js, CORS, Dotenv |
-| **Database** | SQLite via `better-sqlite3` (WAL mode enabled) |
-| **Auth & Security** | JWT (`jsonwebtoken`), Password Hashing (`bcryptjs`) |
+| **Database** | SQLite via `better-sqlite3` with WAL mode |
+| **Authentication** | JSON Web Tokens (`jsonwebtoken`) |
+| **Password Security** | `bcryptjs` |
+| **Version Control** | Git & GitHub |
+| **Frontend Deployment** | Vercel |
+| **Backend Deployment** | Render |
 
 ---
 
-## 📁 Project Structure
+## 🏗️ Architecture
 
-```
+```text
+                         ┌──────────────────────┐
+                         │        USER          │
+                         └──────────┬───────────┘
+                                    │
+                                    ▼
+                         ┌──────────────────────┐
+                         │   React + Vite       │
+                         │     Frontend         │
+                         │      (Vercel)        │
+                         └──────────┬───────────┘
+                                    │
+                              HTTP / REST API
+                                    │
+                                    ▼
+                         ┌──────────────────────┐
+                         │  Node.js + Express   │
+                         │      Backend         │
+                         │      (Render)        │
+                         └──────────┬───────────┘
+                                    │
+                                    ▼
+                         ┌──────────────────────┐
+                         │       SQLite         │
+                         │     better-sqlite3   │
+                         └──────────────────────┘
+
 CodeAlpha_Ecommerce/
 ├── backend/
-│   ├── data/                 # Auto-generated SQLite database (gitignored)
+│   ├── data/
+│   │   └── store.db              # Auto-generated SQLite database (gitignored)
 │   ├── src/
-│   │   ├── controllers/      # Route handler controllers (auth, cart, order, product)
-│   │   ├── database/         # SQLite schema initialization (db.js) & seed data (seed.js)
-│   │   ├── middleware/       # JWT authMiddleware
-│   │   ├── models/           # Data access models (User, Product, Cart, Order)
-│   │   ├── routes/           # Express route definitions
-│   │   └── server.js         # API entry point & health check
-│   ├── .env.example          # Backend environment variables template
+│   │   ├── controllers/          # Auth, cart, order & product controllers
+│   │   ├── database/             # Database initialization & seed data
+│   │   ├── middleware/           # JWT authentication middleware
+│   │   ├── models/               # User, Product, Cart & Order data models
+│   │   ├── routes/               # Express API route definitions
+│   │   └── server.js             # API entry point & health check
+│   ├── .env.example              # Backend environment template
 │   └── package.json
 ├── frontend/
-│   ├── public/               # Static assets & favicons
+│   ├── public/                   # Static assets & favicons
 │   ├── src/
-│   │   ├── components/       # Header, ProductCard, ProductGrid, LoadingGrid, ErrorState, EmptyState
-│   │   ├── context/          # AuthContext, CartContext, ThemeContext
-│   │   ├── hooks/            # useProducts, useProduct
-│   │   ├── pages/            # ProductsPage, ProductDetailPage, CartPage, CheckoutPage, etc.
-│   │   ├── App.jsx           # Application routing & layout
-│   │   ├── index.css         # Global design tokens, typography, and dark mode theme
-│   │   └── main.jsx          # React DOM entry point
-│   ├── .env.example          # Frontend environment variables template
-│   ├── index.html            # HTML shell with blocking theme script
+│   │   ├── components/           # Reusable UI components
+│   │   ├── context/              # Auth, Cart & Theme contexts
+│   │   ├── hooks/                # Product-related custom hooks
+│   │   ├── pages/                # Application pages
+│   │   ├── App.jsx               # Application routing & layout
+│   │   ├── index.css             # Global styles & design tokens
+│   │   └── main.jsx              # React DOM entry point
+│   ├── .env.example              # Frontend environment template
+│   ├── index.html                # HTML shell & theme initialization
 │   └── package.json
-├── .gitignore                # Production-grade gitignore rules
-└── README.md
-```
-
+├── .gitignore                    # Git ignore rules
+├── README.md                     # Project documentation
+└── LICENSE                       # MIT License
 ---
-
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- **Node.js** (v18.0.0 or higher recommended)
-- **npm** (v9.0.0 or higher)
+- **Node.js** v18.0.0 or higher
+- **npm** v9.0.0 or higher
+- **Git**
 
----
+Verify your installation:
+
+~~~bash
+node --version
+npm --version
+git --version
+~~~
 
 ### 1. Clone the Repository
 
-```bash
-git clone <repository-url>
+~~~bash
+git clone YOUR_GITHUB_REPOSITORY_URL
 cd CodeAlpha_Ecommerce
-```
-
----
+~~~
 
 ### 2. Backend Setup
 
-1. Navigate to the `backend` directory:
-   ```bash
-   cd backend
-   ```
+Navigate to the backend:
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+~~~bash
+cd backend
+~~~
 
-3. Create the environment configuration file from `.env.example`:
-   ```bash
-   cp .env.example .env
-   ```
-   *(On Windows PowerShell: `Copy-Item .env.example .env`)*
+Install dependencies:
 
-4. Configure `.env` if necessary:
-   ```env
-   PORT=5000
-   NODE_ENV=development
-   FRONTEND_URL=http://localhost:5173
-   JWT_SECRET=your_jwt_secret_key_here
-   JWT_EXPIRES=7d
-   ```
+~~~bash
+npm install
+~~~
 
-5. Start the backend development server:
-   ```bash
-   npm run dev
-   ```
-   The backend API will start at: `http://localhost:5000`
+Create the environment file:
 
----
+**macOS / Linux:**
+
+~~~bash
+cp .env.example .env
+~~~
+
+**Windows PowerShell:**
+
+~~~powershell
+Copy-Item .env.example .env
+~~~
+
+Configure `.env`:
+
+~~~env
+PORT=5000
+NODE_ENV=development
+FRONTEND_URL=http://localhost:5173
+JWT_SECRET=your_jwt_secret_key_here
+JWT_EXPIRES=7d
+~~~
+
+Start the backend:
+
+~~~bash
+npm run dev
+~~~
+
+Backend API:
+
+~~~text
+http://localhost:5000
+~~~
+
+Health check:
+
+~~~text
+http://localhost:5000/api/health
+~~~
 
 ### 3. Frontend Setup
 
-1. Open a new terminal and navigate to the `frontend` directory:
-   ```bash
-   cd frontend
-   ```
+Open a new terminal and navigate to the frontend:
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+~~~bash
+cd frontend
+~~~
 
-3. Create the environment configuration file from `.env.example`:
-   ```bash
-   cp .env.example .env
-   ```
-   *(On Windows PowerShell: `Copy-Item .env.example .env`)*
+Install dependencies:
 
-4. Start the frontend development server:
-   ```bash
-   npm run dev
-   ```
-   The application will be accessible at: `http://localhost:5173`
+~~~bash
+npm install
+~~~
+
+Create the environment file:
+
+**macOS / Linux:**
+
+~~~bash
+cp .env.example .env
+~~~
+
+**Windows PowerShell:**
+
+~~~powershell
+Copy-Item .env.example .env
+~~~
+
+Configure the frontend environment according to the backend API URL.
+
+Start the frontend:
+
+~~~bash
+npm run dev
+~~~
+
+The application will normally be available at:
+
+~~~text
+http://localhost:5173
+~~~
 
 ---
 
 ## 💾 Database Setup & Auto-Seeding
 
-The project uses an embedded **SQLite** database via `better-sqlite3`.
+TechStore uses an embedded **SQLite database** through `better-sqlite3`.
 
-- When the backend starts for the first time, `backend/src/database/db.js` automatically creates `backend/data/store.db`.
-- The database schema is initialized (`products`, `users`, `cart_items`, `orders`, `order_items`).
-- Sample data from `seed.js` is automatically populated into the `products` table if the catalog is empty.
-- **No manual SQL migrations or database setup commands are required.**
+No external database server is required for local development.
+
+When the backend starts for the first time:
+
+1. The SQLite database is automatically created.
+2. The database schema is initialized.
+3. Required tables are created.
+4. Seed data is inserted when the product catalog is empty.
+
+The database includes:
+
+- `products`
+- `users`
+- `cart_items`
+- `orders`
+- `order_items`
+
+The generated database is stored at:
+
+~~~text
+backend/data/store.db
+~~~
+
+The database file is excluded from Git version control through `.gitignore`.
 
 ---
 
 ## 📡 API Reference
 
 ### Health Check
-| Method | Endpoint | Description | Auth Required |
+
+| Method | Endpoint | Description | Authentication |
 |---|---|---|---|
-| `GET` | `/api/health` | Server status and environment check | No |
+| `GET` | `/api/health` | Returns server status and environment information | ❌ |
 
 ### Products
-| Method | Endpoint | Description | Auth Required |
+
+| Method | Endpoint | Description | Authentication |
 |---|---|---|---|
-| `GET` | `/api/products` | Retrieve all products in the catalog | No |
-| `GET` | `/api/products/:id` | Retrieve details for a single product | No |
+| `GET` | `/api/products` | Retrieve all products | ❌ |
+| `GET` | `/api/products/:id` | Retrieve a specific product | ❌ |
 
 ### Authentication
-| Method | Endpoint | Description | Auth Required |
+
+| Method | Endpoint | Description | Authentication |
 |---|---|---|---|
-| `POST` | `/api/auth/register` | Register a new user account | No |
-| `POST` | `/api/auth/login` | Authenticate user and receive JWT token | No |
-| `POST` | `/api/auth/security-question` | Retrieve security question for password reset | No |
-| `POST` | `/api/auth/verify-security-answer` | Verify answer and receive reset token | No |
-| `POST` | `/api/auth/reset-password` | Reset password using verified reset token | No |
+| `POST` | `/api/auth/register` | Register a new user | ❌ |
+| `POST` | `/api/auth/login` | Authenticate user and receive JWT | ❌ |
+| `POST` | `/api/auth/security-question` | Retrieve security question | ❌ |
+| `POST` | `/api/auth/verify-security-answer` | Verify security answer | ❌ |
+| `POST` | `/api/auth/reset-password` | Reset password using reset token | ❌ |
 
 ### Shopping Cart
-| Method | Endpoint | Description | Auth Required |
+
+| Method | Endpoint | Description | Authentication |
 |---|---|---|---|
-| `GET` | `/api/cart` | Retrieve current user's cart items and total | `Bearer <token>` |
-| `POST` | `/api/cart` | Add product to cart with quantity | `Bearer <token>` |
-| `PUT` | `/api/cart/:productId` | Update item quantity in cart | `Bearer <token>` |
-| `DELETE` | `/api/cart/:productId` | Remove a specific item from cart | `Bearer <token>` |
-| `DELETE` | `/api/cart` | Clear all items from current user's cart | `Bearer <token>` |
+| `GET` | `/api/cart` | Retrieve current user's cart | 🔒 JWT |
+| `POST` | `/api/cart` | Add product to cart | 🔒 JWT |
+| `PUT` | `/api/cart/:productId` | Update cart item quantity | 🔒 JWT |
+| `DELETE` | `/api/cart/:productId` | Remove an item from cart | 🔒 JWT |
+| `DELETE` | `/api/cart` | Clear the current user's cart | 🔒 JWT |
 
 ### Orders & Checkout
-| Method | Endpoint | Description | Auth Required |
+
+| Method | Endpoint | Description | Authentication |
 |---|---|---|---|
-| `POST` | `/api/orders` | Create an order from current cart & clear cart | `Bearer <token>` |
-| `GET` | `/api/orders` | Retrieve authenticated user's order history | `Bearer <token>` |
-| `GET` | `/api/orders/:id` | Retrieve single order details and line items | `Bearer <token>` |
+| `POST` | `/api/orders` | Create order from current cart | 🔒 JWT |
+| `GET` | `/api/orders` | Retrieve authenticated user's orders | 🔒 JWT |
+| `GET` | `/api/orders/:id` | Retrieve individual order details | 🔒 JWT |
 
 ---
 
 ## 🔒 Security Best Practices
 
-- **Zero Hardcoded Secrets:** All secrets (JWT secret keys, database paths, port numbers) are managed via environment variables.
-- **Password Hashing:** Passwords and security answers are hashed using `bcryptjs` with salt rounds.
-- **Route Protection:** Cart and Order endpoints are protected with strict JWT verification middleware.
-- **Sanitized Gitignore:** SQLite database files, `.env` configurations, `node_modules`, and build artifacts are strictly excluded from version control.
+- **Zero Hardcoded Secrets:** Sensitive configuration is managed through environment variables.
+- **Password Hashing:** Passwords and security answers are hashed using `bcryptjs`.
+- **JWT Authentication:** Protected API requests require valid JWT tokens.
+- **Route Protection:** Cart and order endpoints are protected by authentication middleware.
+- **Git Protection:** `.env`, SQLite database files, `node_modules`, and build artifacts are excluded from version control.
 
 ---
 
-## 📜 License & Acknowledgments
+## 🌍 Deployment
 
-Developed as part of the **CodeAlpha Internship Program** — Task 1 (Full Stack E-Commerce Development).
+The application uses a separate frontend and backend deployment architecture.
 
-<!-- Deployment pipeline verified -->
+~~~text
+                         GitHub
+                           │
+              ┌────────────┴────────────┐
+              │                         │
+              ▼                         ▼
+           Vercel                    Render
+              │                         │
+              ▼                         ▼
+      React Frontend             Express Backend
+              │                         │
+              └────────────┬────────────┘
+                           │
+                           ▼
+                          API
+~~~
+
+### Frontend — Vercel
+
+The React + Vite frontend is deployed on **Vercel**.
+
+🌐 **Live Application:** [Open TechStore](YOUR_VERCEL_URL)
+
+### Backend — Render
+
+The Node.js + Express backend is deployed on **Render**.
+
+The production frontend communicates with the deployed backend through the configured API URL.
+
+---
+
+## 📸 Screenshots
+
+Add screenshots of the final application to the repository and update the filenames below if necessary.
+
+### 🏠 Home / Product Catalog
+
+![TechStore Home](screenshots/home.png)
+
+### 📦 Product Details
+
+![Product Details](screenshots/product-details.png)
+
+### 🛒 Shopping Cart
+
+![Shopping Cart](screenshots/cart.png)
+
+### 🔐 Authentication
+
+![Authentication](screenshots/login.png)
+
+### 💳 Checkout
+
+![Checkout](screenshots/checkout.png)
+
+> Store screenshots inside a `screenshots/` folder in the repository so the README images render correctly on GitHub.
+
+---
+
+## 🧪 Testing
+
+The application was tested across the major user workflows.
+
+### Functional Testing
+
+- [x] User registration
+- [x] User login
+- [x] Password recovery
+- [x] Product loading
+- [x] Product browsing
+- [x] Category filtering
+- [x] Product details
+- [x] Add to cart
+- [x] Update cart quantity
+- [x] Remove cart items
+- [x] Clear cart
+- [x] Checkout
+- [x] Order creation
+- [x] Order history
+- [x] Order details
+- [x] Frontend/backend communication
+- [x] Production API communication
+
+### Responsive Testing
+
+The interface was tested across:
+
+- 📱 Mobile
+- 📟 Tablet
+- 💻 Desktop
+
+### Deployment Testing
+
+The production deployment was tested to verify:
+
+- Frontend availability
+- Backend availability
+- API communication
+- Product loading
+- Authentication flow
+- Cart functionality
+- Checkout functionality
+
+---
+
+## 🧑‍💻 Development Workflow
+
+~~~text
+Local Development
+       │
+       ▼
+Feature Development
+       │
+       ▼
+Local Testing
+       │
+       ▼
+Git Commit
+       │
+       ▼
+GitHub
+       │
+       ├──────────────► Vercel
+       │                  │
+       │                  ▼
+       │             Frontend Deploy
+       │
+       └──────────────► Render
+                          │
+                          ▼
+                     Backend Deploy
+~~~
+
+This workflow keeps the project version-controlled while supporting deployment of both the frontend and backend.
+
+---
+
+## 🎯 Learning Outcomes
+
+This project provided practical experience with:
+
+- Full-stack web development
+- React application development
+- Vite configuration
+- Component-based architecture
+- React Router
+- Context API
+- Custom React hooks
+- REST API development
+- Express.js
+- SQLite database integration
+- Database transactions
+- JWT authentication
+- Password hashing
+- Middleware
+- CORS
+- Environment variables
+- Git and GitHub
+- Responsive web design
+- Production debugging
+- Vercel deployment
+- Render deployment
+- Frontend/backend integration
+
+---
+
+## 🔮 Future Improvements
+
+Potential future enhancements include:
+
+- 💳 Online payment gateway integration
+- ❤️ Wishlist functionality
+- 🔎 Advanced product search
+- 🏷️ Advanced filtering and sorting
+- ⭐ Product reviews and ratings
+- 👤 User profile management
+- 📊 Admin dashboard
+- 📈 Sales analytics
+- 📦 Advanced order tracking
+- 📧 Email notifications
+- 🔔 Order-status notifications
+- 🖼️ Advanced product image management
+- 🌐 Internationalization and multiple currencies
+- ♿ Further accessibility improvements
+
+---
+
+## 🤝 Contributing
+
+Contributions and suggestions are welcome.
+
+1. Fork the repository.
+2. Create a feature branch:
+
+~~~bash
+git checkout -b feature/your-feature
+~~~
+
+3. Make your changes.
+4. Commit your changes:
+
+~~~bash
+git commit -m "feat: add your feature"
+~~~
+
+5. Push your branch:
+
+~~~bash
+git push origin feature/your-feature
+~~~
+
+6. Open a Pull Request.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+You are free to use, modify, and distribute this project according to the terms of the license.
+
+See the [LICENSE](LICENSE) file for the complete license text.
+
+---
+
+## 👨‍💻 Author
+
+**YOUR NAME**
+
+B.E. Information Technology Student
+
+- 🐙 GitHub: [YOUR_GITHUB_PROFILE](YOUR_GITHUB_PROFILE_URL)
+- 💼 LinkedIn: [YOUR_LINKEDIN_PROFILE](YOUR_LINKEDIN_PROFILE_URL)
+
+---
+
+## 🏆 Internship Project
+
+This project was developed as part of the:
+
+**CodeAlpha Internship Program**
+
+### Task 1 — Full Stack E-Commerce Website
+
+The project demonstrates the development, testing, and deployment of a complete full-stack e-commerce application using modern JavaScript technologies.
+
+---
+
+## ⭐ Support
+
+If you found this project useful or interesting, consider giving the repository a ⭐ on GitHub.
+
+---
+
+<p align="center">
+  Built with ❤️ using React, Node.js, Express, SQLite and modern web technologies.
+</p>
+
+<p align="center">
+  <strong>CodeAlpha Internship • Task 1 • Full Stack Web Development</strong>
+</p>
